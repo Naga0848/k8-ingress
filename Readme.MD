@@ -33,7 +33,7 @@
     Ingress controller --> Ingress
 
 
-#### Steps to install Ingress COntroller
+#### Understanding OIDC Provider role in Ingress Controller
 
     # OIDC === trust and authentication provider
 
@@ -73,7 +73,7 @@
         ACC_ID=315069654700    # replace with your accountID
 
         And now Create an IAM OIDC provider
-        
+
         eksctl utils associate-iam-oidc-provider \
         --region $REGION_CODE \
         --cluster $CLUSTER_NAME \
