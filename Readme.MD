@@ -143,6 +143,13 @@
                     port:
                         number: 80 # app1 service port
 
+    If someone hits app1.daws84s.site, it should route the traffic e to the app1 service and finally the traffic reaches the pods which are attached to app1 service.
+
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]' indicates that we are using https to expose our application
+    alb.ingress.kubernetes.io/certificate-arn === certificate for authentication
+    alb.ingress.kubernetes.io/scheme  === indicates that we are using our ingress for internet-facing
+    alb.ingress.kubernetes.io/target-type == even if a pod gets deleted new pod easily gets attached to the targetgroups of the loadbalancer when we use ip
+    
 #### Understanding Ingress Controller
      
      What is Ingress? 
