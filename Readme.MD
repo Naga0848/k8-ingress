@@ -117,7 +117,6 @@
 
     The below is the Ingress controller diagram, where TargetGroup has all the pods
     ![alt text](image.png)
-
 #### Understanding Ingress yaml file
 
     apiVersion: networking.k8s.io/v1
@@ -148,7 +147,7 @@
      
      What is Ingress? 
      Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
-        ![alt text](image-1.png)
+     ![alt text](image-1.png)
     Here is a simple example where an Ingress sends all its traffic to one Service:
 
 
