@@ -32,7 +32,12 @@
 
     Ingress controller --> Ingress
 
-
+#### Ingress Controller Definition
+     
+     What is Ingress? 
+     Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the
+cluster. Traffic routing is controlled by rules defined on the Ingress resource.
+    
 #### Understanding OIDC Provider role in Ingress Controller
 
     # OIDC === trust and authentication provider
@@ -150,8 +155,8 @@
     alb.ingress.kubernetes.io/scheme  === indicates that we are using our ingress for internet-facing
     alb.ingress.kubernetes.io/target-type == even if a pod gets deleted new pod easily gets attached to the targetgroups of the loadbalancer when we use ip
 
-#### Ingress Controller Definition
-     
-     What is Ingress? 
-     Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
-    
+
+
+
+ 
+
