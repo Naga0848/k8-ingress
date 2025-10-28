@@ -149,8 +149,8 @@
     alb.ingress.kubernetes.io/certificate-arn === certificate for authentication
     alb.ingress.kubernetes.io/scheme  === indicates that we are using our ingress for internet-facing
     alb.ingress.kubernetes.io/target-type == even if a pod gets deleted new pod easily gets attached to the targetgroups of the loadbalancer when we use ip
-    
-#### Understanding Ingress Controller
+
+#### Ingress Controller Definition
      
      What is Ingress? 
      Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
