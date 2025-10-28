@@ -6,9 +6,8 @@
 
     https://kubernetes-sigs.github.io/aws-load-balancer-controller/latest/deploy/installation/
 
-#### Understanding Ingress Controller in a general context
 
-    Ingress Controller(AWS Application LoadBalancer)
+    Ingress Controller === (AWS Application LoadBalancer)
 
     ALB Listener --> Rule --> Target Group --> VM
     ALB Listener --> Rule --> Target Group --> Container/Pod
