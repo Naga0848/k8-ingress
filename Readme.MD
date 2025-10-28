@@ -67,16 +67,44 @@
 
 #### Commands to implement Ingress Controller
 
-        These are the variables and we should give them on our worker machine
-        REGION_CODE=us-east-1 # replace with your region
-        CLUSTER_NAME=roboshop-dev # replace with your cluster name
-        ACC_ID=315069654700    # replace with your accountID
+    These are the variables and we should give them on our worker machine
 
-        And now Create an IAM OIDC provider
+    REGION_CODE=us-east-1 # replace with your region
+    CLUSTER_NAME=roboshop-dev # replace with your cluster name
+    ACC_ID=315069654700    # replace with your accountID
 
-        eksctl utils associate-iam-oidc-provider \
+    And now Create an IAM OIDC provider
+
+    eksctl utils associate-iam-oidc-provider \
+    --region $REGION_CODE \
+    --cluster $CLUSTER_NAME \
+    --approve
+
+    # Download IAM Policy
+
+    curl -o iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.13.4/docs/install/iam_policy.json
+
+    # Create an IAM policy named AWSLoadBalancerControllerIAMPolicy. If you downloaded a different policy, replace iam-policy with the name of the policy that you downloaded
+
+        aws iam create-policy \
+        --policy-name AWSLoadBalancerControllerIAMPolicy \
+        --policy-document file://iam-policy.json
+
+    # Create an IAM role and Kubernetes ServiceAccount for the LBC. Use the ARN from the previous step.
+        This is Mapping between IAM ROle and K8 Service account
+
+        eksctl create iamserviceaccount \
+        --cluster=$CLUSTER_NAME \
+        --namespace=kube-system \
+        --name=aws-load-balancer-controller \
+        --attach-policy-arn=arn:aws:iam::$ACC_ID:policy/AWSLoadBalancerControllerIAMPolicy \
+        --override-existing-serviceaccounts \
         --region $REGION_CODE \
-        --cluster $CLUSTER_NAME \
         --approve
 
+#### UNDERSTANDING WHY WE ARE USING THE ABOVE STEPS
 
+    IAM --> has Roles, permissions, etc.
+    K8 --> It is independent platform as a service. K8 has its own RBAC. 
+    Why should we integrate K8 RBAC and IAM ?
+    Because AWS services should have IAM permissions to create/manage other services.To create AWS services from K8 resources K8 SA should integrate with AWS IAM Role.
