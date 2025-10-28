@@ -148,3 +148,4 @@
      What is Ingress? 
      Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
      Here is a simple example where an Ingress sends all its traffic to one Service:
+iahhfjhEFNlkhfNDLKVH[Odv;PDDV'LLnv[oion'LEKFJ[OeelH[OF]]]]
