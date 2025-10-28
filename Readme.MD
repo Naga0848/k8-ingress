@@ -150,5 +150,3 @@
      Here is a simple example where an Ingress sends all its traffic to one Service:
         ![alt text](image.png)
 
-
-
