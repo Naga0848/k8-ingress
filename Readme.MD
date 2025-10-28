@@ -115,4 +115,9 @@
 
     helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=$CLUSTER_NAME --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
 
-    
+    ## Ingress Image
+
+Here’s how the services interact:
+
+![Ingress Diagram](Ingress.png)
+
