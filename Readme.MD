@@ -144,7 +144,13 @@
                     port:
                         number: 80 # app1 service port
 
+#### Understanding Ingress Controller
+     
+     What is Ingress? 
+     Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
 
+    Here is a simple example where an Ingress sends all its traffic to one Service:
+    ![alt text](image-1.png)
 
 
 
