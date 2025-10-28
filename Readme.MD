@@ -119,4 +119,4 @@
 
 Here’s how the services interact:
 
-![alt text](ingress.png)
+![INgress Diagram](ingress.png)
