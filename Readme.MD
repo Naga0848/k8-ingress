@@ -116,7 +116,7 @@
     helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=$CLUSTER_NAME --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
 
     The below is the Ingress controller diagram, where TargetGroup has all the pods
-    
+
 #### Understanding Ingress yaml file
 
     apiVersion: networking.k8s.io/v1
@@ -148,7 +148,7 @@
      What is Ingress? 
      Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
      Here is a simple example where an Ingress sends all its traffic to one Service:
-
+        ![alt text](image.png)
 
 
 
