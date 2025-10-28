@@ -108,3 +108,11 @@
     K8 --> It is independent platform as a service. K8 has its own RBAC. 
     Why should we integrate K8 RBAC and IAM ?
     Because AWS services should have IAM permissions to create/manage other services.To create AWS services from K8 resources K8 SA should integrate with AWS IAM Role.
+
+#### Install Load balancer controller drivers
+
+    helm repo add eks https://aws.github.io/eks-charts
+
+    helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=$CLUSTER_NAME --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
+
+    
