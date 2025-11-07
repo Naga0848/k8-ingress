@@ -4,7 +4,7 @@
 
     Ingress Controller is nothing but a Application loadbalancer from AWS
 
-    https://kubernetes-sigs.github.io/aws-load-balancer-controller/latest/deploy/installation/
+    https://kubernetes-sigs.github.io/aws-load-balancer-controller/latest/deploy/installation/    >>>> url to understand the aws ingress controller
 
     #### Understanding Ingress Controller in a general context
 
