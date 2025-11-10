@@ -156,7 +156,9 @@
     alb.ingress.kubernetes.io/target-type == even if a pod gets deleted new pod easily gets attached to the targetgroups of the loadbalancer when we use ip
 
 
-
-
- 
+    The service file in the manifest file will attach our pods to the target groups
+    The ingress file in the manifest is responsible for creating the application loadbaclancer and its targetGroups in AWS console
+    alb.ingress.kubernetes.io/group.name: joindevops   >>> this annotation in our ingessfile will indicate that we are using a single ALB
+    Different targetgroups get created as we have different records(app1.njanapati.site) and (app2.njanapati.site) >>> but this both records reroute to a single ALB
+    
 
