@@ -162,6 +162,7 @@
     alb.ingress.kubernetes.io/group.name: joindevops   >>> this annotation in our ingessfile will indicate that we are using a single ALB
     Different targetgroups get created as we have different records(app1.njanapati.site) and (app2.njanapati.site) >>> but this both records reroute to a single ALB
     While creating records(app1.njanapati.site) and (app2.njanapati.site) we should attach this to a single ALB in the AWS console.
+    If we notice, we have a host name in our ingress file, and we have a servicename as app1. This indicates that if someone hits app1.daws84s.site, it will redirect the user to the app1 service and service will allocate one of the pods under it. And finally user gets the necessary data.
 
     
 
