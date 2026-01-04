@@ -1,4 +1,4 @@
-#### In this repo, we will understand how Ingress Controller works and watch session-67 to implement it
+## In this repo, we will understand how Ingress Controller works and watch session-67 and session-68 to implement it
 
     This is a onetime setup in the applications
 
